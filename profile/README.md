@@ -10,3 +10,64 @@ The FollowMe dApp is built for content creators, businesses, projects, and indiv
 
 
 **Architectural Diagram**
+
++------------------------------------+
+|    Init       |
+|------------------------------------|
+| - LSP7: Fetch Owned Assets         |
+| - LSP5: Received Assets            |
+| - LSP4: Fetch Asset Metadata       |
+| - LSP3: Profile Metadata           |
+|   - LSP6: Key Manager (Permissions)|
+|   - LSP1: UniversalReceiverDelegate|
++------------------------------------+
+                |
+                v
++------------------------------------+
+|    Campaign Configuration          |
+|------------------------------------|
+| - Start Campaign                   |
+|   - Set Reward & Max Spend         |
++------------------------------------+
+                |
+                v
++------------------------------------+
+|    Permission Check & Approval     |
+|------------------------------------|
+| - Check FollowMe Controller Perms  |
+| - Prompt User Wallet Approval (if  |
+|   permissions insufficient)        |
++------------------------------------+
+                |
+                v
++------------------------------------+
+|    FollowMe Smart Contract         |
+|------------------------------------|
+| - Call startCampaign()             |
+|   - Register New Followers         |
+|   - Set LSP1 UniversalReceiver     |
+|   - Listen for LSP26 Follow Events |
++------------------------------------+
+
+
++------------------------------------+
+|    Viewer Interaction (Grid)       |
+|------------------------------------|
+| - Fetch Active Campaign            |
+| - Check:                           |
+|   - Follow Status                  |
+|   - Account Permissions            |
+|   - UniversalReceiverDelegate      |
+| - Display Campaign (if valid)      |
++------------------------------------+
+                |
+                v
++------------------------------------+
+|    Follow Event & Reward           |
+|------------------------------------|
+| - Viewer Follows User              |
+| - LSP26: Trigger Follow Event      |
+| - FollowMe Controller Validates    |
+| - Transfer Reward to Follower      |
+| - Store Follower (Avoid Duplicates)|
++------------------------------------+
