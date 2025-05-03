@@ -10,7 +10,7 @@ The FollowMe dApp is built for content creators, businesses, projects, and indiv
 
 
 **Architectural Diagram**
-
+```text
 +------------------------------------+
 |    Init       |
 |------------------------------------|
