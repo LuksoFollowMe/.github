@@ -8,6 +8,12 @@ The FollowMe dApp is built for content creators, businesses, projects, and indiv
 4. New followers automatically receive a reward — but only once per profile (no abuse through follow/unfollow loops).
 5. The campaign automatically ends when the total allocated tokens have been distributed.
 
+**Testnet deployment**
+https://universaleverything.io/0xC360089dD0BAa6B598F18D3809098243945cA83d?network=testnet
+
+**Demo video**
+https://youtu.be/Tp7Nr1hJPaU
+
 
 **Architectural Diagram**
 ```text
