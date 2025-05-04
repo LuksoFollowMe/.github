@@ -17,7 +17,7 @@ https://universaleverything.io/0xC360089dD0BAa6B598F18D3809098243945cA83d?networ
 https://youtu.be/Tp7Nr1hJPaU
 
 
-**Architectural Diagram**
+**Architectural Diagram:**
 ```text
 +------------------------------------+
 |    Init       |
